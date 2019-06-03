@@ -35,4 +35,14 @@
 		  </div>
 		  
 	</body>
+
+	<script>
+		var urlParams = new URLSearchParams(window.location.search);
+		if (urlParams.has('type') && urlParams.has('phoneNumber') && urlParams.get('type') === 'alertPrank') {
+			var phoneNumber = urlParams.get('phoneNumber');
+			document.getElementById('phoneNumber').value = phoneNumber;
+			document.getElementById('message').value = "The above text IS A PRANK and has been sent by one of your friends. Please do not take the texts from this phone number seriously, as non of them are real.";
+		}
+	</script>
+			
 </html>
